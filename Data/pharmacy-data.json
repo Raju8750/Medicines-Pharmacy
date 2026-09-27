@@ -1,0 +1,69 @@
+{
+  "Medicines": [
+    {
+      "Id": 1,
+      "FullName": "Paracetamol 500mg",
+      "Notes": "For fever and pain relief",
+      "ExpiryDate": "2027-05-19T00:00:00",
+      "Quantity": 50,
+      "Price": 12.5,
+      "Brand": "ABC Pharma"
+    },
+    {
+      "Id": 2,
+      "FullName": "Crocin 500mg",
+      "Notes": "Fever medicine",
+      "ExpiryDate": "2026-09-30T00:00:00",
+      "Quantity": 100,
+      "Price": 20,
+      "Brand": "Sun Pharma"
+    },
+    {
+      "Id": 3,
+      "FullName": "Paracetamol 250mg",
+      "Notes": "Paracetamol 250mg",
+      "ExpiryDate": "2027-12-10T00:00:00",
+      "Quantity": 5,
+      "Price": 10.5,
+      "Brand": "ABC Pharma"
+    }
+  ],
+  "Sales": [
+    {
+      "Id": 1,
+      "MedicineId": 3,
+      "MedicineName": "Paracetamol 250mg",
+      "QuantitySold": 50,
+      "UnitPrice": 10.5,
+      "TotalAmount": 525.0,
+      "SaleDate": "2026-09-19T13:33:46.0301539+05:30"
+    },
+    {
+      "Id": 2,
+      "MedicineId": 3,
+      "MedicineName": "Paracetamol 250mg",
+      "QuantitySold": 30,
+      "UnitPrice": 10.5,
+      "TotalAmount": 315.0,
+      "SaleDate": "2026-09-19T13:34:07.4024675+05:30"
+    },
+    {
+      "Id": 3,
+      "MedicineId": 3,
+      "MedicineName": "Paracetamol 250mg",
+      "QuantitySold": 10,
+      "UnitPrice": 10.5,
+      "TotalAmount": 105.0,
+      "SaleDate": "2026-09-19T13:34:19.800518+05:30"
+    },
+    {
+      "Id": 4,
+      "MedicineId": 3,
+      "MedicineName": "Paracetamol 250mg",
+      "QuantitySold": 5,
+      "UnitPrice": 10.5,
+      "TotalAmount": 52.5,
+      "SaleDate": "2026-09-19T13:34:27.7059603+05:30"
+    }
+  ]
+}

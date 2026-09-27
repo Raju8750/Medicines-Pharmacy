@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ABC Pharmacy</title>
+    <link rel="stylesheet" href="/css/site.css?ver=1.1" />
+</head>
+<body>
+    <header class="header">
+        <div>
+            <h1>ABC Pharmacy</h1>
+            <p>Medicine & Sales Management</p>
+        </div>
+        <nav>
+            <button class="nav-btn active" data-target="medicinesSection">Medicines</button>
+            <button class="nav-btn" data-target="salesSection">Sales Records</button>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="medicinesSection" class="section">
+            <div class="section-title">
+                <div>
+                    <h2>Medicine List</h2>
+                    <p>Red = expires within 30 days. Yellow = stock below 10.</p>
+                </div>
+                <button id="openAddBtn" class="primary">+ Add Medicine</button>
+            </div>
+
+            <div class="toolbar search-container">
+                <input id="searchInput" type="text"
+                       placeholder="Search medicine name or brand..." />
+                <button id="searchBtn" class="secondary">Search</button>
+                <button id="clearSearchBtn" class="secondary">Clear</button>
+                <div id="searchSuggestions" class="search-suggestions"></div>
+
+            </div>
+
+            <div id="message" class="message"></div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>Brand</th>
+                            <th>Expiry Date</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Sale</th>
+                        </tr>
+                    </thead>
+                    <tbody id="medicineTableBody"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="salesSection" class="section hidden">
+            <div class="section-title">
+                <div>
+                    <h2>Sale Records</h2>
+                    <p>Every completed sale is stored in the JSON file.</p>
+                </div>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Medicine</th>
+                            <th>Quantity Sold</th>
+                            <th>Unit Price</th>
+                            <th>Total Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody id="salesTableBody"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="addMedicinePanel" class="modal hidden">
+            <div class="modal-card">
+                <div class="modal-header">
+                    <h2>Add Medicine</h2>
+                    <button id="closeAddBtn" class="close">×</button>
+                </div>
+
+                <form id="medicineForm">
+                    <label>Full Name
+                        <input name="fullName" required maxlength="150" />
+                    </label>
+
+                    <label>Notes
+                        <textarea name="notes" rows="3"></textarea>
+                    </label>
+
+                    <label>Expiry Date
+                        <input name="expiryDate" type="date" required />
+                    </label>
+
+                    <label>Quantity
+                        <input name="quantity" type="number" min="0" required />
+                    </label>
+
+                    <label>Price
+                        <input name="price" type="number" min="0" step="0.01" required />
+                    </label>
+
+                    <label>Brand
+                        <input name="brand" required maxlength="100" />
+                    </label>
+
+                    <div class="form-actions">
+                        <button type="button" id="cancelAddBtn" class="secondary">Cancel</button>
+                        <button type="submit" class="primary">Save Medicine</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>
